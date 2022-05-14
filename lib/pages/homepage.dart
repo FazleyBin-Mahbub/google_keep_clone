@@ -22,7 +22,9 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: bgColor,
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // search bar
             Container(
               margin: EdgeInsets.only(
                   top: size.height * 0.05,
@@ -110,6 +112,27 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ],
+                  ),
+                ],
+              ),
+            ),
+            // search bar ended
+            // notes
+            Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: 25,
+                vertical: 20,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'ALL',
+                    style: GoogleFonts.roboto(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13,
+                      color: white.withOpacity(0.5),
+                    ),
                   ),
                 ],
               ),

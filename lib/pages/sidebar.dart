@@ -39,16 +39,19 @@ class _SideBarState extends State<SideBar> {
                 color: Colors.orangeAccent.withOpacity(0.3),
                 icon: Icons.lightbulb_outline,
                 title: 'Notes',
+                onClick: () {},
               ),
-              SizedBox(
-                height: 10,
-              ),
+
               // second section
-              sideBarSections(icon: Icons.archive_outlined, title: 'Archive'),
+              sideBarSections(
+                  icon: Icons.archive_outlined,
+                  title: 'Archive',
+                  onClick: () {}),
               // settings section
               sideBarSections(
                 icon: Icons.settings_outlined,
                 title: 'Settings',
+                onClick: () {},
               ),
             ],
           ),
@@ -58,7 +61,10 @@ class _SideBarState extends State<SideBar> {
   }
 
   Widget sideBarSections(
-      {required IconData icon, required String title, Color? color,VoidCallback? onClick}) {
+      {required IconData icon,
+      required String title,
+      Color? color,
+      VoidCallback? onClick}) {
     return TextButton(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(
