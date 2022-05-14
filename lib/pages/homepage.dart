@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_keep_notes/constants/constanst.dart';
+import 'package:google_keep_notes/pages/sidebar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,8 +16,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      endDrawerEnableOpenDragGesture: true,
       key: _drawerKey,
-      drawer: Drawer(),
+      drawer: SideBar(),
       backgroundColor: bgColor,
       body: SafeArea(
         child: Column(
